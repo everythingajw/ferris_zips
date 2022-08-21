@@ -55,12 +55,12 @@ pub fn heap_sort(vec: &mut Vec<u32>) {
         heap_sort_down(vec, k, size, temp)
     }
 
-    let temp = p[size];
-    p[size] = p[1];
-    if size > 2 && p[2] < temp {
-        p[1] = p[2];
-        p[2] = temp;
+    let temp = vec[size];
+    vec[size] = vec[1];
+    if size > 2 && vec[2] < temp {
+        vec[1] = vec[2];
+        vec[2] = temp;
     } else {
-        p[1] = temp;
+        vec[1] = temp;
     }
 }
